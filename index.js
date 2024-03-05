@@ -6,19 +6,26 @@ get_template().then((e) => {
 		.querySelector("button")
 		.addEventListener("click", function (e) {
 			// Your click event logic here
-      const form_raw = document.forms["qt_lead_form"];
-						console.log("form_raw: ", form_raw);
-      const form = new FormData(form_raw);
-						alert(
-							JSON.stringify(Object.fromEntries(form.entries())),
-						);
-
-
+			const form_raw = document.forms["qt_lead_form"];
+			console.log("form_raw: ", form_raw);
+			const form = new FormData(form_raw);
+			alert(JSON.stringify(Object.fromEntries(form.entries())));
 
 			console.log("hello world");
 			e.preventDefault();
 		});
-	document.body.appendChild(clone);
+
+	const placements = document.querySelectorAll(".placement");
+	const holder = [...placements];
+	console.log("holder: ", holder);
+	console.log("placements: ", placements);
+	if (holder.length > 0) {
+		holder.forEach((e) => {
+			e.appendChild(clone);
+		});
+	} else {
+		document.body.appendChild(clone);
+	}
 });
 
 get_styles();
