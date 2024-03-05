@@ -1,3 +1,34 @@
-body {
-  background-color: pink;
+/* styles.css for form Template */
+.form {
+  font-family: sans-serif;
+  border: 2px solid rgb(234, 234, 234);
+  border-radius: 8px;
+  padding: 30px 20px;
+  background-color: white;
+  box-shadow: insets;
+  margin-top: 2rem;
+  max-width: 350px;
+  margin-inline: auto;
+  display: grid;
+  gap: 16px;
+}
+.form_input input {
+  /* width: 300px; */
+  padding: 8px 5px;
+  border-radius: 3px;
+  border: 1px solid rgb(234, 234, 234);
+}
+.form button {
+  background-color: blue;
+  color: white;
+  border: 2px solid rgb(40, 40, 248);
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-inline: auto;
+  width: 100%;
+ }
+
+.form_input {
+  display: grid;
+  gap: 12px;
 }

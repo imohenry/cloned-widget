@@ -6,6 +6,7 @@ get_template().then((e) => {
 		.querySelector("button")
 		.addEventListener("click", function (e) {
 			// Your click event logic here
+
 			console.log("hello world");
 			e.preventDefault();
 		});
@@ -16,7 +17,9 @@ get_styles();
 
 // Getting Template from another Page
 async function get_template() {
-	const fetch_temp = await fetch("/temp.html");
+	const fetch_temp = await fetch(
+		"https://dev-bazz.github.io/widget/temp",
+	);
 	const template = (await fetch_temp.text()).toString();
 	const stringed = template.toString();
 	const dom_P = new DOMParser().parseFromString(
@@ -32,7 +35,8 @@ function get_styles() {
 	const link = document.createElement("link");
 	link.rel = "stylesheet";
 	link.type = "text/css";
-	link.href = "/styles.css";
+	link.href = "https://dev-bazz.github.io/widget/styles.css";
+	// link.href = "/styles.css";
 
 	// Append the link element to the head of the document
 	document.head.appendChild(link);
