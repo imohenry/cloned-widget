@@ -6,6 +6,11 @@ get_template().then((e) => {
 		.querySelector("button")
 		.addEventListener("click", function (e) {
 			// Your click event logic here
+      const form_raw = document.forms["qt_lead_form"];
+						console.log("form_raw: ", form_raw);
+						const form = new FormData(form_raw);
+
+
 
 			console.log("hello world");
 			e.preventDefault();
