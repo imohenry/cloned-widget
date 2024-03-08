@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Template</title>
   <script type="module" src="./index.js" defer></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script  src="//cdnt.netcoresmartech.com/smartechclient.js"></script>
+  <script>
+    const phoneInputField = document.querySelector("#number");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
 </head>
 <body>
 
