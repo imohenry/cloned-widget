@@ -63,7 +63,7 @@ get_template().then((e) => {
             // });
   
             // Clear the form after successful submission
-            const form = document.getElementById('form_details');
+            const form = document.getElementById('signup-form');
             form.reset();
           } else if (response.status === 400) {
             Swal.fire({
@@ -77,7 +77,7 @@ get_template().then((e) => {
             //     downloadPDF();
             //   }
             // });
-            const form = document.getElementById('form_details');
+            const form = document.getElementById('signup-form');
             form.reset();
           } else {
             // Handle unexpected errors
