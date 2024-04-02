@@ -3,14 +3,16 @@ get_template().then((e) => {
     const t_form = e.querySelector("#form_template");
     const clone = t_form.content.cloneNode(true);
   
-      // Get the data-attribute value from the script element
-  const dataAttribute = document.currentScript.dataset.widgetType;
+    
 
     // Replace the button click event listener logic with the signup functionality
     clone
       .querySelector("button")
       .addEventListener("click", async function (e) {
         e.preventDefault();
+
+          // Get the data-attribute value from the script element
+  const dataAttribute = document.currentScript.dataset.widgetType;
   
         // Form data extraction
         const firstName = document.getElementById('firstName').value;

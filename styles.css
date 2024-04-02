@@ -32,3 +32,7 @@
   display: grid;
   gap: 12px;
 }
+
+.header_main {
+  text-align: center;
+}
